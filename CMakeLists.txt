@@ -10,7 +10,7 @@ file (GLOB CPP_FILES ${PROJECT_SOURCE_DIR}/src/*.cpp ${PROJECT_SOURCE_DIR}/src/a
 
 set (SOURCE_FILES ${CPP_FILES})
 
-ADD_LIBRARY(ec SHARED ${SOURCE_FILES})
+ADD_LIBRARY(ec STATIC ${SOURCE_FILES})
 
 add_subdirectory(./examples/ackley)
 add_subdirectory(./examples/griewangk)
