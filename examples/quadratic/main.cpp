@@ -59,7 +59,7 @@ int main() {
     unique_ptr<Problem> working_problem;
 
     // Quadratic(maxiterations, )
-    working_problem = unique_ptr<Problem>(new Quadratic(245, 0));
+    working_problem = unique_ptr<Problem>(new Quadratic(245, 0.0, 0.65, 0.01));
     
     // Run GA on problem
     if (working_problem != nullptr) {

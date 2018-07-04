@@ -15,6 +15,7 @@ using namespace problem;
 using aliases::parameter;
 using individual::Individual;
 
+// delta: the fluctuation of the value in mutation operation
 Problem::Problem(const int dimension, const std::string & n,
 		 const parameter dn, const parameter dx,
 		 const parameter rn, const parameter rx,

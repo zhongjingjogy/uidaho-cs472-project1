@@ -66,18 +66,19 @@ const Individual Genetic::solve() const {
       // selection and mutation stage
       population offspring;
       while(offspring.size() != population_size) {
-	// tournament selection of parents
-	const population parents = selection(generation);
-	// crossover
-	const population children = recombinator->crossover(parents, problem);
-	// add mutated children to offspring
-	for (const Individual child : children) offspring.emplace_back(mutator.mutate(problem, child));
+        // tournament selection of parents
+        const population parents = selection(generation);
+        // crossover
+        const population children = recombinator->crossover(parents, problem);
+        // add mutated children to offspring
+        for (const Individual child : children) offspring.emplace_back(mutator.mutate(problem, child));
       }
       // replace generation with offspring
       generation.swap(offspring);
       // elitism replacement of random individuals
-      for (int i = 0; i < elitism; ++i)
-	generation[population_dist(rg.engine)] = best;
+      for (int i = 0; i < elitism; ++i) {
+        generation[population_dist(rg.engine)] = best;
+      }
     }
     log.close();
     return best;
