@@ -7,7 +7,7 @@
 
 #include "hill_climbing_algorithm.hpp"
 #include "algorithm.hpp"
-#include "../individual/individual.hpp"
+#include "individual/individual.hpp"
 
 using algorithm::HillClimbing;
 using individual::Individual;

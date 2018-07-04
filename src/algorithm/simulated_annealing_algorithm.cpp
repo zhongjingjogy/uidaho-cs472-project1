@@ -8,9 +8,9 @@
 
 #include "algorithm.hpp"
 #include "simulated_annealing_algorithm.hpp"
-#include "../aliases.hpp"
-#include "../individual/individual.hpp"
-#include "../random_generator.hpp"
+#include "aliases.hpp"
+#include "individual/individual.hpp"
+#include "random_generator.hpp"
 
 using algorithm::SimulatedAnnealing;
 using aliases::parameter;

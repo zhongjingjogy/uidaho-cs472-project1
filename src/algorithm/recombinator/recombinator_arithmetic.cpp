@@ -6,7 +6,7 @@
 
 #include "recombinator.hpp"
 #include "recombinator_arithmetic.hpp"
-#include "../../random_generator.hpp"
+#include "random_generator.hpp"
 
 using algorithm::recombinator::Arithmetic;
 using algorithm::population;

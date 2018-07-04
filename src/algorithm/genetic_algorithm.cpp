@@ -10,9 +10,9 @@
 
 #include "algorithm.hpp"
 #include "genetic_algorithm.hpp"
-#include "../aliases.hpp"
-#include "../individual/individual.hpp"
-#include "../random_generator.hpp"
+#include "aliases.hpp"
+#include "individual/individual.hpp"
+#include "random_generator.hpp"
 
 using algorithm::Genetic;
 using algorithm::population;

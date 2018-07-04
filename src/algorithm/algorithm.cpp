@@ -4,10 +4,10 @@
  */
 
 #include "algorithm.hpp"
-#include "../aliases.hpp"
-#include "../individual/individual.hpp"
-#include "../problem/problem.hpp"
-#include "../random_generator.hpp"
+#include "aliases.hpp"
+#include "individual/individual.hpp"
+#include "problem/problem.hpp"
+#include "random_generator.hpp"
 #include "mutator/mutator.hpp"
 
 using algorithm::Algorithm;

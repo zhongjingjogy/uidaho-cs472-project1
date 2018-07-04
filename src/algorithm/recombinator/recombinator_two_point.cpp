@@ -7,7 +7,7 @@
 
 #include "recombinator.hpp"
 #include "recombinator_two_point.hpp"
-#include "../../random_generator.hpp"
+#include "random_generator.hpp"
 
 using algorithm::recombinator::TwoPoint;
 using algorithm::population;

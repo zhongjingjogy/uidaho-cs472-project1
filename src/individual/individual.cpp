@@ -9,8 +9,8 @@
 #include <cstdlib>
 
 #include "individual.hpp"
-#include "../aliases.hpp"
-#include "../random_generator.hpp"
+#include "aliases.hpp"
+#include "random_generator.hpp"
 
 using individual::Individual;
 using aliases::parameter;

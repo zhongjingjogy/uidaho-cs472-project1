@@ -8,8 +8,8 @@
 #include <string>
 
 #include "problem.hpp"
-#include "../aliases.hpp"
-#include "../individual/individual.hpp"
+#include "aliases.hpp"
+#include "individual/individual.hpp"
 
 using namespace problem;
 using aliases::parameter;

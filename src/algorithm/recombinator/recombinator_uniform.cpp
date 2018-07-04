@@ -7,7 +7,7 @@
 
 #include "recombinator.hpp"
 #include "recombinator_uniform.hpp"
-#include "../../random_generator.hpp"
+#include "random_generator.hpp"
 
 using algorithm::recombinator::Uniform;
 using algorithm::population;

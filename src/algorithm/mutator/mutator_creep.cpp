@@ -5,9 +5,9 @@
 
 #include "mutator.hpp"
 #include "mutator_creep.hpp"
-#include "../../individual/individual.hpp"
-#include "../../aliases.hpp"
-#include "../../random_generator.hpp"
+#include "individual/individual.hpp"
+#include "aliases.hpp"
+#include "random_generator.hpp"
 
 using individual::Individual;
 using aliases::parameter;
