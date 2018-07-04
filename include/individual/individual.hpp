@@ -20,15 +20,15 @@ namespace individual {
 
   class Individual {
   private:
-    static const int dimension = aliases::dimension;
-    typedef std::array<parameter, dimension> genome;
-    genome solution;
+    typedef std::vector<parameter> genome;
+    std::vector<parameter> solution;
     parameter min;
     parameter max;
   public:
-    Individual();
-    Individual(const parameter & gene, const bool m);
-    Individual(const parameter & n, const parameter & x, const bool m, real_dist r);
+    int vardimension;
+    Individual(int dimension);
+    Individual(int dimension, const parameter & gene, const bool m);
+    Individual(int dimension, const parameter & n, const parameter & x, const bool m, real_dist r);
     bool minimize = true;
     // construction wrappers (e.g. potential() / mutate()) set fitness
     parameter fitness; // raw, not normalized

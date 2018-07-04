@@ -32,8 +32,9 @@ namespace problem {
     const parameter chance;
     const int constant;
     const long iterations;
+    int vardimension;
     // sane-ish defaults, should all be overridden
-    Problem(const std::string & name = "Abstract",
+    Problem(const int dimension, const std::string & name = "Abstract",
 	    const parameter dn = 0, const parameter dx = 1,
 	    const parameter rn = 0, const parameter rx = 10,
 	    const bool z = true,

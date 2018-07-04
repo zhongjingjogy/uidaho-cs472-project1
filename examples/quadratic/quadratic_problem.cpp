@@ -16,7 +16,7 @@ using aliases::parameter;
 using individual::Individual;
 
 parameter Quadratic::fitness(const Individual & subject) const {
-  double target[100] = {-100};
+  double target[3] = {0, 10, 20};
   parameter sum = 0;
   for (unsigned long i = 0; i < subject.size(); ++i) {
     sum += std::pow(subject[i] - target[i], 2);

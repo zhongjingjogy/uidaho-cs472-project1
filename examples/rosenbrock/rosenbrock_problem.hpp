@@ -21,7 +21,7 @@ namespace problem {
 	       const parameter f = 0.85,
 	       const parameter d = 0.1,
 	       const parameter h = 0.5,
-	       const int c = 10000): Problem("Rosenbrock",
+	       const int c = 10000): Problem(3, "Rosenbrock",
 					     -2.048, 2.048, 0, 46000, true,
 					     i, g, f, d, h, c) {};
     parameter fitness(const Individual & subject) const;

@@ -45,12 +45,12 @@ const Individual Genetic::solve() const {
       << ", tournament size " << tournament_size
       << ", crossover size " << recombinator->get_size()
       << ", crossover chance of " << recombinator->get_chance()
-      << ", mutation chance of " << 1./aliases::dimension
+      << ", mutation chance of " << 1./problem.vardimension
       << ", and elitism replacement size " << elitism << "." << std::endl;
   while(true) {
     // create initial population
     population generation;
-    Individual best;
+    Individual best(problem.vardimension);
     int_dist population_dist(0, population_size - 1); // closed interval, so (-1)
     for (int i = 0; i < population_size; ++i)
       generation.emplace_back(problem.potential());

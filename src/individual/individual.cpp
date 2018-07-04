@@ -16,30 +16,39 @@ using individual::Individual;
 using aliases::parameter;
 using namespace random_generator;
 
-Individual::Individual(): min(0), max(0), minimize(false), fitness(0) {
+Individual::Individual(int dimension): min(0), max(0), minimize(false), fitness(0) {
   // zeroed Individual represents error, with fitness being worst possible
-  solution.fill(0);
+  vardimension = dimension;
+  solution.resize(vardimension);
 }
 
-Individual::Individual(const parameter & gene, const bool m): min(0), max(0),
+Individual::Individual(int dimension, const parameter & gene, const bool m): min(0), max(0),
 							      minimize(m),
 							      fitness(0) {
   // sets up Individual with fill of particular gene
-  solution.fill(gene);
+  vardimension = dimension;
+  solution.resize(vardimension);
+  for(int i=0; i<dimension; i++) {
+    solution[i] = gene;
+  }
 }
 
-Individual::Individual(const parameter & n,
+Individual::Individual(int dimension, const parameter & n,
 		       const parameter & x,
 		       const bool m,
 		       real_dist range_dist): min(n), max(x),
 					      minimize(m),
 					      fitness(0) {
   // sets up random Individual for a particular problem
-  solution.fill(range_dist(rg.engine));
+  vardimension = dimension;
+  solution.resize(vardimension);
+  for(int i=0; i<dimension; i++) {
+    solution[i] = range_dist(rg.engine);
+  }
 }
 
 const std::string Individual::represent() const {
-  std::string representation = "Individual:\n";
+  std::string representation = std::string("Individual(") + std::to_string(vardimension) + "):\n";
   for (parameter value : solution)
     representation += " (" + std::to_string(value) + ")";
   return representation += '\n';

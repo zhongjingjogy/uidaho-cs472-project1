@@ -15,7 +15,7 @@ using namespace problem;
 using aliases::parameter;
 using individual::Individual;
 
-Problem::Problem(const std::string & n,
+Problem::Problem(const int dimension, const std::string & n,
 		 const parameter dn, const parameter dx,
 		 const parameter rn, const parameter rx,
 		 const bool z,
@@ -23,7 +23,7 @@ Problem::Problem(const std::string & n,
 		 const parameter g, const parameter f,
 		 const parameter d, const parameter h,
 		 const int c):
-  range_min(rn), range_max(rx), minimize(z), range_dist(dn, dx),
+  vardimension(dimension), range_min(rn), range_max(rx), minimize(z), range_dist(dn, dx),
   name(n), domain_min(dn), domain_max(dx), goal(g),
   filter(f), delta(d), chance(h), constant(c), iterations(i) {};
 
@@ -51,7 +51,7 @@ const Individual Problem::worst() const {
 }
 
 const Individual Problem::potential() const {
-  Individual potential(domain_min, domain_max, minimize, range_dist);
+  Individual potential(vardimension, domain_min, domain_max, minimize, range_dist);
   potential.fitness = fitness(potential);
   return potential;
 }
