@@ -1,5 +1,7 @@
 Genetic Algorithm
---------------------
+-------------------------------
+
+[Deprecated] Too hard to be adapted.
 
 A code for real code genetic algorithm, where the genes are represented by array of numerical number rather than the binary string. 
 
